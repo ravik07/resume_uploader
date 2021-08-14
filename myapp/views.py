@@ -18,5 +18,5 @@ class HomeView(View):
 class CandidateView(View):
 	def get(self,request,pk):
 		candidate = Resume.objects.get(pk = pk)
-		print("==========================",pk)
+		# print("==========================",pk)
 		return render(request, 'myapp/candidate.html',{'candidate':candidate})
